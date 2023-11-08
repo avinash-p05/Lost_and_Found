@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1078073488644",
+    "project_id": "lost-found-app-5b8b9",
+    "storage_bucket": "lost-found-app-5b8b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078073488644:android:7fa5967545fda5dcf7cc51",
+        "android_client_info": {
+          "package_name": "com.example.lost_found_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAR4QSL5hRcDIMMk0RnWLjivMwcW8DEDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

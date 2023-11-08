@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B8EFDF"
+    tools:context=".AFragment">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+
+        android:fontFamily="@font/aclonica"
+        android:gravity="center_horizontal"
+        android:text="Report Count"
+        android:textAlignment="center"
+        android:textColor="@color/signup"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="60dp"
+        android:textColor="@color/signup"
+        android:text="Lost"
+        android:textSize="30sp"
+        android:fontFamily="@font/aclonica"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="210dp"
+        android:textColor="@color/signup"
+        android:text="Found"
+        android:textSize="30sp"
+        android:fontFamily="@font/aclonica"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/lostcount"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/signup"
+        android:editable="false"
+        android:enabled="false"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="60sp" />
+
+    <EditText
+        android:id="@+id/foundcount"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/signup"
+        android:editable="false"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="60sp" />
+
+</FrameLayout>

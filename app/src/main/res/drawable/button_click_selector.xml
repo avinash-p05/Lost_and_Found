@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default state (unpressed) -->
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- White color for unpressed state -->
+        </shape>
+    </item>
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#4AE488" /> <!-- Green color for pressed state -->
+        </shape>
+    </item>
+</selector>
