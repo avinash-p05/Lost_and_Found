@@ -4,8 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8EFDF"
+    android:background="#C4F9D5"
     tools:context=".register">
+
+    <TextView
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
+        android:inputType="textEmailAddress"
+        android:text="Already have a account? "
+        android:textColor="#A895DA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/glasses" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="60dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.717"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/money" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="61dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bag" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
@@ -19,35 +74,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 
-    <TextView
-        android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:fontFamily="@font/aclonica"
-        android:inputType="textEmailAddress"
-        android:text="Already have a account? "
-        android:textColor="@color/signup"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907" />
-
     <EditText
         android:id="@+id/p2"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/input"
+        android:elevation="12dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
-        android:textColor="@color/signup"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:textStyle="italic"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -55,48 +95,71 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.745" />
 
-    <EditText
-        android:id="@+id/fname"
+    <Button
+        android:id="@+id/r"
         android:layout_width="340dp"
-        android:layout_height="45dp"
-        android:background="@drawable/input"
-        android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:textColor="@color/signup"
+        android:layout_height="60dp"
+        android:backgroundTint="#A895DA"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
 
-        android:textSize="16sp"
-        android:textStyle="italic"
+
+        app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintVertical_bias="0.861" />
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="340dp"
+        android:layout_height="45dp"
+        android:background="@drawable/input"
+        android:elevation="12dp"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="Enter Your Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.459" />
 
     <EditText
         android:id="@+id/uid"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/input"
-        android:capitalize="characters"
+        android:capitalize="sentences"
+        android:elevation="12dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="UID/USN"
-        android:inputType="textShortMessage|text"
+        android:fontFamily="@font/alata"
+        android:hint="Enter UID"
+        android:inputType="text|textCapCharacters|textCapWords"
         android:paddingLeft="20dp"
 
-        android:textColor="@color/signup"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:textStyle="italic"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.358" />
 
     <EditText
         android:id="@+id/email1"
@@ -104,34 +167,48 @@
         android:layout_height="45dp"
         android:autoText="false"
         android:background="@drawable/input"
+        android:elevation="12dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="College Email"
+        android:fontFamily="@font/alata"
+        android:hint="Enter Your Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
-        android:textColor="@color/signup"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:textStyle="italic"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintVertical_bias="0.556" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941"
+        app:srcCompat="@drawable/bottle" />
 
     <EditText
         android:id="@+id/p1"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/input"
+        android:elevation="12dp"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
-        android:hint="Password"
-        android:inputType="textVisiblePassword"
+        android:fontFamily="@font/alata"
+        android:hint="Enter Password"
+        android:inputType="text|textPassword"
         android:paddingLeft="20dp"
-        android:textColor="@color/signup"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:textStyle="italic"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -141,13 +218,14 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="160dp"
-        android:layout_height="56dp"
-        android:fontFamily="@font/aclonica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
         android:text="Register"
-        android:textColor="@color/signup"
+        android:textColor="#A895DA"
         android:textSize="34sp"
-        android:textStyle="bold|italic"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -155,32 +233,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.071" />
 
-    <Button
-        android:id="@+id/r"
-        android:layout_width="340dp"
-        android:layout_height="60dp"
-        android:background="@drawable/login_btn"
-
-        android:text="Register"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-
-        android:textStyle="bold|italic"
-
-
-        app:backgroundTint="#FC134B4F"
-        app:iconPadding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.847" />
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="94dp"
+        android:layout_height="98dp"
+        android:elevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

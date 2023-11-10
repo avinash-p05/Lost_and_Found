@@ -5,7 +5,7 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8EFDF"
+    android:background="#C4F9D5"
     tools:context=".CFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,71 +13,141 @@
     <!-- Apply the same selector -->
 
 
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086"
+        app:srcCompat="@drawable/glasses" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="60dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.887"
+        app:srcCompat="@drawable/money" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="61dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937"
+        app:srcCompat="@drawable/bag" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672"
+        app:srcCompat="@drawable/bottle" />
+
     <Button
         android:id="@+id/submit"
         android:layout_width="200dp"
         android:layout_height="60dp"
-        android:background="@drawable/button_click_selector"
+        android:backgroundTint="#A895DA"
 
+        android:fontFamily="@font/alata"
         android:text="submit"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-
         android:textStyle="bold|italic"
 
 
-        app:iconPadding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintVertical_bias="0.763" />
 
     <EditText
         android:id="@+id/description"
 
         android:layout_width="300dp"
-        android:layout_height="120dp"
-        android:background="@color/white"
+        android:layout_height="40dp"
+        android:background="@color/signup"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="top"
         android:hint="Describe about it"
         android:inputType="textMultiLine"
-        android:lines="5"
+        android:lines="1"
 
         android:padding="10dp"
-        android:textColor="@color/signup"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.495" />
+
+    <EditText
+        android:id="@+id/contact"
+
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@color/signup"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:gravity="top"
+        android:hint="Contact Details"
+        android:inputType="text|textShortMessage"
+        android:lines="1"
+
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587" />
 
     <EditText
         android:id="@+id/objectname"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@color/white"
+        android:background="@color/signup"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="top"
         android:hint="What did you Lost/Found?"
         android:inputType="textShortMessage|text"
         android:lines="1"
 
         android:padding="10dp"
-        android:textColor="@color/signup"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.311" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -97,76 +167,94 @@
 
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@color/white"
+        android:background="@color/signup"
         android:ems="10"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="top"
         android:hint="Location"
         android:inputType="textShortMessage|text"
         android:lines="1"
 
         android:padding="10dp"
-        android:textColor="@color/signup"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintVertical_bias="0.4" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="center_horizontal"
         android:text="Report Center"
         android:textAlignment="center"
-        android:textColor="@color/signup"
+        android:textColor="#A895DA"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="center_horizontal"
         android:text="Found"
         android:textAlignment="center"
-        android:textColor="@color/signup"
+        android:textColor="#A895DA"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintHorizontal_bias="0.676"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
-
+        app:layout_constraintVertical_bias="0.2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="center_horizontal"
         android:text="Lost"
         android:textAlignment="center"
-        android:textColor="@color/signup"
+        android:textColor="#A895DA"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal"
+        android:text="Select Report Type *"
+        android:textAlignment="center"
+        android:textColor="#A895DA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.156" />
 
     <Switch
         android:id="@+id/switchlost"
@@ -174,22 +262,23 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165"
+        app:layout_constraintVertical_bias="0.209"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Switch
         android:id="@+id/switchfound"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164"
+        app:layout_constraintVertical_bias="0.208"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 

@@ -18,7 +18,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     }
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {
-        public TextView userNameTextView, loc, reportDescription, status, date, obj;
+        public TextView userNameTextView, loc, reportDescription, status, date, obj,contact;
 
         public ReportViewHolder(View itemView) {
             super(itemView);
@@ -28,6 +28,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
             status = itemView.findViewById(R.id.statusTextView);
             obj = itemView.findViewById(R.id.objectNameTextView);
             date = itemView.findViewById(R.id.dateTextView);
+            contact = itemView.findViewById(R.id.contactTextView);
         }
     }
 
@@ -45,6 +46,7 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
         holder.loc.setText(MessageFormat.format("Location - {0}",report.getLocation()));
         holder.reportDescription.setText(MessageFormat.format("Description - {0}",report.getReportDescription()));
         holder.status.setText(MessageFormat.format("Type - {0}",report.getReportType()));
+        holder.contact.setText(MessageFormat.format("Contact - {0}",report.getContact()));
         holder.obj.setText(MessageFormat.format("Object Name - {0}",report.getObjectName()));
         holder.date.setText(report.getReportDate());
     }

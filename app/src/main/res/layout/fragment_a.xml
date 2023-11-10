@@ -1,83 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8EFDF"
+    android:background="#C4F9D5"
     tools:context=".AFragment">
 
 
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="60dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412"
+        app:srcCompat="@drawable/money" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
+        app:srcCompat="@drawable/glasses" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="61dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63"
+        app:srcCompat="@drawable/bag" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bottle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="50dp"
-
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/alata"
         android:gravity="center_horizontal"
         android:text="Report Count"
         android:textAlignment="center"
         android:textColor="@color/signup"
+
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="60dp"
-        android:textColor="@color/signup"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal"
         android:text="Lost"
-        android:textSize="30sp"
-        android:fontFamily="@font/aclonica"
-        android:textStyle="bold"
         android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        android:textColor="@color/signup"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="210dp"
-        android:textColor="@color/signup"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal"
         android:text="Found"
-        android:textSize="30sp"
-        android:fontFamily="@font/aclonica"
+        android:textAlignment="center"
+        android:textColor="@color/signup"
+        android:textSize="35sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.161" />
 
-    <EditText
+    <TextView
         android:id="@+id/lostcount"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="180dp"
-        android:background="@color/signup"
-        android:editable="false"
-        android:enabled="false"
-        android:fontFamily="@font/aclonica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
         android:gravity="center"
         android:padding="0dp"
-        android:text="00"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="60sp" />
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253" />
 
-    <EditText
+    <TextView
         android:id="@+id/foundcount"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="180dp"
-        android:background="@color/signup"
-        android:editable="false"
-        android:fontFamily="@font/aclonica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
         android:gravity="center"
         android:padding="0dp"
-        android:text="00"
         android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="60sp" />
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

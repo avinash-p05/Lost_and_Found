@@ -10,16 +10,17 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/signup"
-        android:layout_marginBottom="?attr/actionBarSize"/>
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="#C4F9D5" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#B8EFDF"
-        app:itemTextColor="@color/signup"
-        app:menu="@menu/nav_items"/>
+        android:background="#A895DA"
+        android:elevation="12dp"
+        app:itemTextColor="#FFFFFF"
+        app:menu="@menu/nav_items" />
 
 </RelativeLayout>

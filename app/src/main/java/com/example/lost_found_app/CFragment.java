@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.Toast;
+import android.text.InputFilter;
 import androidx.fragment.app.Fragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,7 +23,7 @@ import java.util.Locale;
 
 public class CFragment extends Fragment {
     private Switch lost, found;
-    private EditText objectname, description, location;
+    private EditText objectname, description, location,contact;
     private Button sub;
     private String user,username;
     private ProgressBar progressBar;
@@ -42,7 +43,13 @@ public class CFragment extends Fragment {
         description = view.findViewById(R.id.description);
         sub = view.findViewById(R.id.submit);
         progressBar = view.findViewById(R.id.progressBar);
-
+        contact = view.findViewById(R.id.contact);
+        InputFilter[] filters = new InputFilter[1];
+        filters[0] = new InputFilter.LengthFilter(35);
+        description.setFilters(filters);
+        objectname.setFilters(filters);
+        location.setFilters(filters);
+        contact.setFilters(filters);
         Bundle data = getArguments();
         if (data != null) {
             user = data.getString("uid1");
@@ -119,13 +126,14 @@ public class CFragment extends Fragment {
         objectname.setText("");
         description.setText("");
         location.setText("");
+        contact.setText("");
         lost.setChecked(false);
         found.setChecked(false);
     }
 
 
     private boolean areFieldsFilled() {
-        return !objectname.getText().toString().isEmpty() && !description.getText().toString().isEmpty() && !location.getText().toString().isEmpty();
+        return !objectname.getText().toString().isEmpty() && !description.getText().toString().isEmpty() && !location.getText().toString().isEmpty()&& !contact.getText().toString().isEmpty();
     }
 
     private void saveDataToFirebase() {
@@ -136,7 +144,7 @@ public class CFragment extends Fragment {
         String currentDateAndTime = sdf.format(new Date());
 
         // Create a new report with the provided data and the current date
-        Report report = new Report(username, status, objectname.getText().toString(), location.getText().toString(), description.getText().toString(), currentDateAndTime);
+        Report report = new Report(username, status, objectname.getText().toString(), location.getText().toString(), description.getText().toString(),contact.getText().toString(), currentDateAndTime);
 
         // Initialize a reference to the "reports" node in the database
         DatabaseReference reportsRef = FirebaseDatabase.getInstance().getReference().child("reports");
@@ -148,6 +156,7 @@ public class CFragment extends Fragment {
         newReportRef.child("status").setValue(report.getReportType());
         newReportRef.child("objectname").setValue(report.getObjectName());
         newReportRef.child("description").setValue(report.getReportDescription());
+        newReportRef.child("contact").setValue(report.getContact());
         newReportRef.child("location").setValue(report.getLocation());
         newReportRef.child("userId").setValue(user); // Store the user ID
         newReportRef.child("username").setValue(report.getUsername()); // Store the username

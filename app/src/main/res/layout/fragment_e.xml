@@ -5,11 +5,57 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B8EFDF"
+    android:background="#C4F9D5"
     tools:context=".EFragment">
 
 
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929"
+        app:srcCompat="@drawable/glasses" />
 
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="60dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.352"
+        app:srcCompat="@drawable/money" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="61dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.691"
+        app:srcCompat="@drawable/bag" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="60dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542"
+        app:srcCompat="@drawable/bottle" />
 
     <ProgressBar
         android:id="@+id/progressBar5"
@@ -37,7 +83,7 @@
         android:textStyle="bold|italic"
 
 
-        app:backgroundTint="#FC134B4F"
+        app:backgroundTint="#A895DA"
         app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,10 +98,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
 
+        android:fontFamily="@font/alata"
         android:gravity="center_horizontal"
         android:text="Profile"
         android:textAlignment="center"
-        android:textColor="@color/signup"
+        android:textColor="#A895DA"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,7 +130,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
         android:hint="Name"
-        android:textColor="@color/signup"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -99,7 +146,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
         android:hint="USN/UID"
-        android:textColor="@color/signup"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="normal|bold"
 
@@ -116,7 +163,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
         android:hint="Email"
-        android:textColor="@color/signup"
+        android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="normal|bold"
 

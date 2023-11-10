@@ -54,10 +54,11 @@ public class BFragment extends Fragment {
                     String objectname = reportSnapshot.child("objectname").getValue(String.class);
                     String location = reportSnapshot.child("location").getValue(String.class);
                     String description = reportSnapshot.child("description").getValue(String.class);
+                    String contact = reportSnapshot.child("contact").getValue(String.class);
                     String date = reportSnapshot.child("reportDate").getValue(String.class);
 
                     // Create a Report object and add it to the list
-                    Report report = new Report(username, status, objectname, location, description, date);
+                    Report report = new Report(username, status, objectname, location, description,contact, date);
                     reportList.add(report);
                 }
 
