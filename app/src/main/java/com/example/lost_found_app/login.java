@@ -62,16 +62,11 @@ public class login extends AppCompatActivity {
                     String id = t.getText().toString();
                     String pass = t1.getText().toString();
 
-                    if (id.isEmpty()) {
-                        Toast.makeText(login.this, "Please Enter the Email!!", Toast.LENGTH_SHORT).show();
-                        resetLoginButtonState();
-                        return;
-                    } else if (pass.isEmpty()) {
-                        Toast.makeText(login.this, "Please Enter the Password!!", Toast.LENGTH_SHORT).show();
+                    if (id.isEmpty() || pass.isEmpty()) {
+                        Toast.makeText(login.this, "Please fill all the Fields!!", Toast.LENGTH_SHORT).show();
                         resetLoginButtonState();
                         return;
                     }
-
                     ref.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -89,12 +84,13 @@ public class login extends AppCompatActivity {
                                     editor.putString("username", name);
                                     editor.putString("emailadd", email);
                                     editor.apply();
-                                    Toast.makeText(login.this, "Login Successful!!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(login.this, "Welcome Back "+name, Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(login.this, MainActivity.class);
                                     i.putExtra("Name", name);
                                     i.putExtra("Email", email);
                                     i.putExtra("Uid", uid);
                                     startActivity(i);
+                                    finish();
                                 } else {
                                     Toast.makeText(login.this, "Incorrect UID or Password!!", Toast.LENGTH_SHORT).show();
                                 }

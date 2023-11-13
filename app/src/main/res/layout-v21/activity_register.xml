@@ -6,38 +6,26 @@
     android:layout_height="match_parent"
     android:background="#C4F9D5"
     tools:context=".register">
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:editable="true"
-    android:elevation="12dp"
-    android:fontFamily="@font/alata"
-    android:inputType="text"
-    android:imeOptions="actionDone"
-    android:text="Already have an account? "
-    android:textColor="#A895DA"
-    android:textSize="16sp"
-    android:textStyle="bold"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.497"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.919" />
-
+        android:autoText="false"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
+        android:inputType="textEmailAddress"
+        android:text="Already have a account? "
+        android:textColor="#A895DA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
+        tools:ignore="TextViewEdits" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -130,7 +118,6 @@
         android:inputType="text|textCapWords|textNoSuggestions"
         android:paddingLeft="20dp"
 
-        android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="normal"
@@ -226,7 +213,18 @@
         app:layout_constraintVertical_bias="0.186"
         app:srcCompat="@drawable/gitlogo" />
 
-
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
 
     <EditText
         android:id="@+id/fname"
