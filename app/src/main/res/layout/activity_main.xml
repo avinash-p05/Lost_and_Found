@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="?attr/actionBarSize"
-        android:background="#C4F9D5" />
+        android:background="#e5e5e5" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#A895DA"
+        android:background="@color/signup"
         android:elevation="12dp"
         app:itemTextColor="#FFFFFF"
         app:menu="@menu/nav_items" />

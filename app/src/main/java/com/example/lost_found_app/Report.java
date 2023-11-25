@@ -1,25 +1,46 @@
 package com.example.lost_found_app;
-public class Report {
-    private String username; // Change 'userId' to 'username' to store the username
-    private String reportType; // "Lost" or "Found"
+
+import java.io.Serializable;
+
+public class Report implements Serializable {
+    private String username;
+    private String reportType;
     private String objectName;
     private String location;
     private String reportDescription;
     private String reportDate;
     private String contact;
+    private String imageUrl;
+
     public Report() {
         // Default constructor required for Firebase Realtime Database
     }
 
-    public Report(String username, String reportType, String objectName, String location, String reportDescription,String contact , String reportDate) {
+    public Report(String username, String reportType, String objectName, String location, String reportDescription, String contact, String reportDate) {
         this.username = username;
         this.reportType = reportType;
         this.objectName = objectName;
         this.location = location;
         this.reportDescription = reportDescription;
         this.reportDate = reportDate;
-        this.contact= contact;// Initialize the date field
+        this.contact = contact;
     }
+
+    public Report(String username, String reportType, String objectName, String location, String reportDescription, String contact, String reportDate, String imageUrl) {
+        this(username, reportType, objectName, location, reportDescription, contact, reportDate);
+        this.imageUrl = imageUrl;
+    }
+
+    // Getter and setter methods for imageUrl
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    // Other getter methods...
 
     // Getter methods for all fields
     public String getUsername() {

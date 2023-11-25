@@ -5,60 +5,33 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4F9D5"
+    android:background="#e5e5e5"
     tools:context=".EFragment">
 
 
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="81dp"
-        android:layout_height="91dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929"
-        app:srcCompat="@drawable/glasses" />
+    <android.widget.Button
+        android:id="@+id/logout"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn"
 
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="60dp"
-        android:layout_height="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352"
-        app:srcCompat="@drawable/money" />
+        android:fontFamily="@font/alata"
+        android:text="Logout"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
 
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="61dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691"
-        app:srcCompat="@drawable/bag" />
 
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="60dp"
-        android:layout_height="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542"
-        app:srcCompat="@drawable/bottle" />
+        app:layout_constraintVertical_bias="0.819" />
 
     <ProgressBar
         android:id="@+id/progressBar5"
+        style="@style/CustomProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -70,28 +43,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:background="@drawable/login_btn"
-
-        android:text="Log out"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-
-        android:textStyle="bold|italic"
-
-
-        app:backgroundTint="#A895DA"
-        app:iconPadding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
-
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
@@ -102,7 +53,7 @@
         android:gravity="center_horizontal"
         android:text="Profile"
         android:textAlignment="center"
-        android:textColor="#A895DA"
+        android:textColor="@color/signup"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

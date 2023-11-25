@@ -1,4 +1,5 @@
 package com.example.lost_found_app;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class BFragment extends Fragment {
@@ -34,7 +36,8 @@ public class BFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        reportAdapter = new ReportAdapter(new ArrayList<>());
+        // Initialize ReportAdapter with an empty list
+        reportAdapter = new ReportAdapter(new ArrayList<>(), getContext());
         recyclerView.setAdapter(reportAdapter);
 
         // Show the progress bar
@@ -56,12 +59,15 @@ public class BFragment extends Fragment {
                     String description = reportSnapshot.child("description").getValue(String.class);
                     String contact = reportSnapshot.child("contact").getValue(String.class);
                     String date = reportSnapshot.child("reportDate").getValue(String.class);
+                    String imageUrl = reportSnapshot.child("imageUrl").getValue(String.class); // Add this line
 
                     // Create a Report object and add it to the list
-                    Report report = new Report(username, status, objectname, location, description,contact, date);
+                    Report report = new Report(username, status, objectname, location, description, contact, date, imageUrl);
                     reportList.add(report);
                 }
 
+                Collections.reverse(reportList);
+                // Set the report list to the adapter
                 reportAdapter.setReportList(reportList);
 
                 // Hide the progress bar after 3 seconds

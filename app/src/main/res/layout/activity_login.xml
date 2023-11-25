@@ -4,33 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4F9D5"
+    android:background="#e5e5e5"
     tools:context=".login">
 
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="81dp"
-        android:layout_height="91dp"
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.883"
-        app:srcCompat="@drawable/glasses" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="60dp"
-        android:layout_height="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971"
-        app:srcCompat="@drawable/money" />
+        app:layout_constraintVertical_bias="0.228" />
 
     <TextView
         android:id="@+id/textView4"
@@ -44,23 +32,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:elevation="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228"
-        app:srcCompat="@drawable/gitlogo" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/reg"
@@ -71,7 +45,7 @@
         android:fontFamily="@font/alata"
         android:inputType="textEmailAddress"
         android:text="Don't have a account ? "
-        android:textColor="#A895DA"
+        android:textColor="@color/signup"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +65,7 @@
         android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
         android:text="Forgot Password? "
-        android:textColor="#A895DA"
+        android:textColor="@color/signup"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,6 +85,7 @@
         android:ems="10"
         android:fontFamily="@font/alata"
         android:hint="UID"
+        android:textColorHint="@color/white"
         android:inputType="text|textShortMessage|textCapCharacters|textNoSuggestions"
         android:paddingLeft="20dp"
         android:textColor="#FFFFFF"
@@ -132,6 +107,7 @@
         android:ems="10"
         android:fontFamily="@font/alata"
         android:hint="Password"
+        android:textColorHint="@color/white"
         android:inputType="text|textPassword|textNoSuggestions"
         android:paddingLeft="20dp"
         android:textColor="#FFFFFF"
@@ -144,16 +120,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.565" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/login"
-        android:layout_width="340dp"
+        android:layout_width="200dp"
         android:layout_height="60dp"
-
-        android:backgroundTint="#A895DA"
+        android:background="@drawable/btn"
         android:elevation="12dp"
         android:fontFamily="@font/alata"
+        android:textColor="@color/white"
+        android:textAlignment="center"
         android:text="Login"
-        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold|italic"
         app:iconPadding="10dp"
@@ -166,8 +142,8 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <ProgressBar
+        style="@style/CustomProgressBar"
         android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -176,29 +152,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="61dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.345"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954"
-        app:srcCompat="@drawable/bag" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="60dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
-        app:srcCompat="@drawable/bottle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

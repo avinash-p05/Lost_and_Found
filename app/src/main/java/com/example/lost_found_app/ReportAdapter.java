@@ -1,10 +1,14 @@
 package com.example.lost_found_app;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.MessageFormat;
@@ -12,23 +16,33 @@ import java.util.List;
 
 public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportViewHolder> {
     private List<Report> reportList;
+    private Context context;
 
-    public ReportAdapter(List<Report> reportList) {
+    public ReportAdapter(List<Report> reportList, Context context) {
         this.reportList = reportList;
+        this.context = context;
     }
 
     public class ReportViewHolder extends RecyclerView.ViewHolder {
-        public TextView userNameTextView, loc, reportDescription, status, date, obj,contact;
+        public TextView userNameTextView, obj, date,status;
+        public ImageView img;
 
         public ReportViewHolder(View itemView) {
             super(itemView);
             userNameTextView = itemView.findViewById(R.id.userNameTextView);
-            loc = itemView.findViewById(R.id.location_report);
-            reportDescription = itemView.findViewById(R.id.reportDes);
-            status = itemView.findViewById(R.id.statusTextView);
             obj = itemView.findViewById(R.id.objectNameTextView);
             date = itemView.findViewById(R.id.dateTextView);
-            contact = itemView.findViewById(R.id.contactTextView);
+            status = itemView.findViewById(R.id.statusTextView);
+            // Set OnClickListener for the item
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        openDetailActivity(reportList.get(position));
+                    }
+                }
+            });
         }
     }
 
@@ -43,17 +57,20 @@ public class ReportAdapter extends RecyclerView.Adapter<ReportAdapter.ReportView
     public void onBindViewHolder(@NonNull ReportViewHolder holder, int position) {
         Report report = reportList.get(position);
         holder.userNameTextView.setText(report.getUsername());
-        holder.loc.setText(MessageFormat.format("Location - {0}",report.getLocation()));
-        holder.reportDescription.setText(MessageFormat.format("Description - {0}",report.getReportDescription()));
-        holder.status.setText(MessageFormat.format("Type - {0}",report.getReportType()));
-        holder.contact.setText(MessageFormat.format("Contact - {0}",report.getContact()));
-        holder.obj.setText(MessageFormat.format("Object Name - {0}",report.getObjectName()));
+        holder.obj.setText(MessageFormat.format("Object Name - {0}", report.getObjectName()));
+        holder.status.setText(MessageFormat.format("Type - {0}", report.getReportType()));
         holder.date.setText(report.getReportDate());
     }
 
     @Override
     public int getItemCount() {
         return reportList.size();
+    }
+
+    private void openDetailActivity(Report report) {
+        Intent intent = new Intent(context, Item_details.class); // Replace with your detail activity class
+        intent.putExtra("REPORT_EXTRA", report); // Pass the report object to the detail activity
+        context.startActivity(intent);
     }
 
     public void setReportList(List<Report> reportList) {

@@ -4,8 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C4F9D5"
+    android:background="#e5e5e5"
     tools:context=".register">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
 
     <TextView
         android:id="@+id/loginbtn"
@@ -16,7 +28,7 @@
         android:fontFamily="@font/alata"
         android:inputType="textEmailAddress"
         android:text="Already have a account? "
-        android:textColor="#A895DA"
+        android:textColor="@color/signup"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,44 +36,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.919"
+        app:layout_constraintVertical_bias="0.939"
         tools:ignore="TextViewEdits" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="81dp"
-        android:layout_height="91dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963"
-        app:srcCompat="@drawable/glasses" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="60dp"
-        android:layout_height="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/money" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="61dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/bag" />
 
     <EditText
         android:id="@+id/p2"
@@ -70,6 +46,7 @@
         android:background="@drawable/input"
         android:elevation="12dp"
         android:ems="10"
+        android:textColorHint="@color/white"
         android:fontFamily="@font/alata"
         android:hint="Confirm Password"
         android:inputType="text|textPassword|textNoSuggestions"
@@ -84,29 +61,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.745" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/r"
-        android:layout_width="340dp"
+        android:layout_width="200dp"
         android:layout_height="60dp"
-        android:backgroundTint="#A895DA"
+        android:background="@drawable/btn"
+
         android:elevation="12dp"
         android:fontFamily="@font/alata"
         android:text="Register"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-
-
         app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintVertical_bias="0.875" />
 
     <EditText
         android:id="@+id/uid"
+        android:textColorHint="@color/white"
         android:layout_width="340dp"
         android:layout_height="45dp"
         android:background="@drawable/input"
@@ -135,6 +112,7 @@
         android:autoText="false"
         android:background="@drawable/input"
         android:elevation="12dp"
+        android:textColorHint="@color/white"
         android:ems="10"
         android:fontFamily="@font/alata"
         android:hint="Enter Your Email"
@@ -150,18 +128,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.556" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="55dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941"
-        app:srcCompat="@drawable/bottle" />
-
     <EditText
         android:id="@+id/p1"
         android:layout_width="340dp"
@@ -169,6 +135,7 @@
         android:background="@drawable/input"
         android:elevation="12dp"
         android:ems="10"
+        android:textColorHint="@color/white"
         android:fontFamily="@font/alata"
         android:hint="Enter Password"
         android:inputType="text|textPassword|textNoSuggestions"
@@ -190,32 +157,18 @@
         android:elevation="12dp"
         android:fontFamily="@font/alata"
         android:text="Register"
-        android:textColor="#A895DA"
+        android:textColor="@color/signup"
         android:textSize="34sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="94dp"
-        android:layout_height="98dp"
-        android:elevation="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186"
-        app:srcCompat="@drawable/gitlogo" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyle"
+        style="@style/CustomProgressBar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
@@ -232,6 +185,7 @@
         android:layout_height="45dp"
         android:background="@drawable/input"
         android:elevation="12dp"
+        android:textColorHint="@color/white"
         android:ems="10"
         android:fontFamily="@font/alata"
         android:hint="Enter Your Name"
