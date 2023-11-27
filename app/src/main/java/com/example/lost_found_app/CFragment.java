@@ -33,13 +33,13 @@ public class CFragment extends Fragment {
     private Switch lost, found;
     private EditText objectname, description, location,contact;
     private Button sub,choose;
-    private String user,username;
+    private String user, username;
     private ProgressBar progressBar;
     private ImageView image;
     private static final int PICK_IMAGE_REQUEST = 1;
     private Uri selectedImageUri;
 
-    private DatabaseReference ref = FirebaseDatabase.getInstance().getReferenceFromUrl("https://lost-found-app-5b8b9-default-rtdb.firebaseio.com/");
+    private DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
     private boolean isSubmitting = false;
 
@@ -94,6 +94,7 @@ public class CFragment extends Fragment {
                 }
             }
         });
+
         choose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,7 +152,6 @@ public class CFragment extends Fragment {
         found.setChecked(false);
     }
 
-
     private boolean areFieldsFilled() {
         // Check if the fields are filled, and also check if an image is selected
         return !objectname.getText().toString().isEmpty() &&
@@ -165,41 +165,44 @@ public class CFragment extends Fragment {
         String status = lost.isChecked() ? "Lost" : "Found";
 
         // Get the current date and time
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault());
         String currentDateAndTime = sdf.format(new Date());
 
         // Create a new report with the provided data and the current date
         Report report = new Report(username, status, objectname.getText().toString(), location.getText().toString(), description.getText().toString(), contact.getText().toString(), currentDateAndTime);
 
-        // Initialize a reference to the "reports" node in the database
         DatabaseReference reportsRef = FirebaseDatabase.getInstance().getReference().child("reports");
 
-        // Push the new report with a unique key
-        DatabaseReference newReportRef = reportsRef.push();
+        // Use the date and time as the key for the report
+        String reportKey = currentDateAndTime.replace(" ", "_").replace("-", "").replace(":", "");
+        DatabaseReference newReportRef = reportsRef.child(reportKey);
 
         // Set the values for the new report, including the date
         newReportRef.child("status").setValue(report.getReportType());
+        newReportRef.child("claimed").setValue(false);
         newReportRef.child("objectname").setValue(report.getObjectName());
         newReportRef.child("description").setValue(report.getReportDescription());
         newReportRef.child("contact").setValue(report.getContact());
         newReportRef.child("location").setValue(report.getLocation());
-        newReportRef.child("userId").setValue(user); // Store the user ID
-        newReportRef.child("username").setValue(report.getUsername()); // Store the username
-        newReportRef.child("reportDate").setValue(report.getReportDate()); // Store the date
+        newReportRef.child("userId").setValue(user);
+        newReportRef.child("username").setValue(report.getUsername());
+        newReportRef.child("reportDate").setValue(report.getReportDate());
+
+        // Now, set other properties of the report and save it to the database
+        newReportRef.child("claimedByUserId").setValue(null); // Initialize claimedByUserId to null
 
         if (selectedImageUri != null) {
             // Upload the image to Firebase Storage
-            uploadImageToFirebase(selectedImageUri, newReportRef.getKey());
+            uploadImageToFirebase(selectedImageUri, reportKey);  // Use the key obtained from push()
         }
     }
 
-
-    // Clear the input fields and reset the switches
 
     private void openGallery() {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -208,8 +211,12 @@ public class CFragment extends Fragment {
             selectedImageUri = data.getData();
             // Set the image URI to the ImageView or perform any other operations with the selected image
             image.setImageURI(selectedImageUri);
+        } else {
+            // Handle the case where image selection was canceled
+            Toast.makeText(requireContext(), "Image selection canceled", Toast.LENGTH_SHORT).show();
         }
     }
+
     private void uploadImageToFirebase(Uri imageUri, String reportId) {
         // Access Firebase Storage instance
         StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("images");
@@ -243,10 +250,4 @@ public class CFragment extends Fragment {
                     progressBar.setVisibility(View.INVISIBLE);
                 });
     }
-
-
-
 }
-
-
-

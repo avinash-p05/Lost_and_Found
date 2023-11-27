@@ -9,25 +9,79 @@
     tools:context=".EFragment">
 
 
-    <android.widget.Button
-        android:id="@+id/logout"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:background="@drawable/btn"
+    <TextView
+        android:id="@+id/linkedin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:clickable="true"
+        android:enabled="true"
         android:fontFamily="@font/alata"
-        android:text="Logout"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:text="LinkedIn"
+        android:textColor="@color/signup"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946" />
 
+    <TextView
+        android:id="@+id/github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:clickable="true"
+        android:enabled="true"
+        android:fontFamily="@font/alata"
+        android:text="Github"
+        android:textColor="@color/signup"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.819" />
+        app:layout_constraintVertical_bias="0.902" />
+
+    <TextView
+        android:id="@+id/git"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:clickable="false"
+        android:enabled="false"
+        android:fontFamily="@font/alata"
+        android:text="Follow me for more apps -"
+        android:textColor="@color/signup"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852" />
+
+    <android.widget.Button
+        android:id="@+id/logout"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/btn"
+
+        android:fontFamily="@font/alata"
+        android:text="Logout"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold|italic"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739" />
 
     <ProgressBar
         android:id="@+id/progressBar5"
@@ -38,10 +92,10 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.617" />
 
     <TextView
         android:id="@+id/textView13"
@@ -54,7 +108,7 @@
         android:text="Profile"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="34sp"
+        android:textSize="@dimen/_34ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,15 +119,15 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
         android:src="@drawable/baseline_person_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <TextView
         android:id="@+id/fname2"
@@ -82,14 +136,14 @@
         android:fontFamily="@font/alata"
         android:hint="Name"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <TextView
         android:id="@+id/uid2"
@@ -98,7 +152,7 @@
         android:fontFamily="@font/alata"
         android:hint="USN/UID"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="normal|bold"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,7 +160,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513" />
+        app:layout_constraintVertical_bias="0.443" />
 
     <TextView
         android:id="@+id/email2"
@@ -115,7 +169,7 @@
         android:fontFamily="@font/alata"
         android:hint="Email"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="normal|bold"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,7 +177,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587" />
+        app:layout_constraintVertical_bias="0.514" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

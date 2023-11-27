@@ -7,12 +7,24 @@
     android:background="#e5e5e5"
     tools:context=".Item_details">
 
+    <ProgressBar
+        android:id="@+id/progressBar8"
+        style="@style/CustomProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485" />
+
     <android.widget.Button
         android:id="@+id/claim"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:background="@drawable/btn"
-
         android:fontFamily="@font/alata"
         android:text="Claim Item"
         android:textColor="#FFFFFF"
@@ -22,33 +34,17 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        app:layout_constraintVertical_bias="0.911" />
 
     <TextView
         android:id="@+id/contactno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
-        android:hint="Contact"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="normal|bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718" />
 
-    <TextView
-        android:id="@+id/descriptionobj"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/alata"
-        android:hint="Description"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="normal|bold"
@@ -57,14 +53,30 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.705" />
+
+    <TextView
+        android:id="@+id/descriptionobj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
 
     <TextView
         android:id="@+id/objectName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
-        android:hint="Object name"
+
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="normal|bold"
@@ -80,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
-        android:hint="Location"
+
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="normal|bold"
@@ -89,14 +101,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.585" />
+        app:layout_constraintVertical_bias="0.579" />
 
     <TextView
         android:id="@+id/userNameTextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
-        android:hint="Username"
+
         android:textColor="@color/signup"
         android:textSize="18sp"
         android:textStyle="normal|bold"
@@ -111,7 +123,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alata"
-        android:hint="12/12/2023"
+
         android:textColor="#000000"
         android:textSize="12sp"
         android:textStyle="normal"
@@ -141,6 +153,23 @@
         app:layout_constraintVertical_bias="0.078"
         android:gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/claimedByTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/signup"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.799" />
+
     <ImageView
         android:id="@+id/imageView33"
         android:layout_width="282dp"
@@ -150,6 +179,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287"
-        app:srcCompat="@drawable/baseline_photo_size_select_actual_24" />
+        app:layout_constraintVertical_bias="0.288"
+        app:srcCompat="@drawable/background" />
 </androidx.constraintlayout.widget.ConstraintLayout>

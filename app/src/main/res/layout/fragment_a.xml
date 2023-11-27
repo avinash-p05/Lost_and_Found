@@ -17,7 +17,7 @@
         android:textAlignment="center"
         android:textColor="@color/signup"
 
-        android:textSize="35sp"
+        android:textSize="@dimen/_34ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         android:text="Lost"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="35sp"
+        android:textSize="@dimen/_30ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
         android:text="Found"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="35sp"
+        android:textSize="@dimen/_30ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
         android:padding="0dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="60sp"
+        android:textSize="@dimen/_45ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +91,7 @@
         android:padding="0dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="60sp"
+        android:textSize="@dimen/_45ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,5 +99,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.253" />
+
+    <TextView
+        android:id="@+id/instructionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="12dp"
+        android:fontFamily="@font/alata"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Instructions:\n1. Welcome to our application!
+\n2. Explore the Home section to review the overall report count.
+\n3. Move to the adjacent Report Center to submit meticulous reports for lost or found items.
+   \n- Ensure reports are detailed and refrain from inappropriate content.
+\n4. Access the Messages feature to peruse user-submitted reports.
+   \n- Click on specific items for in-depth information.
+\n5. Visit the Profile section to view and manage your user data.
+"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foundcount"
+        app:layout_constraintVertical_bias="0.357" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

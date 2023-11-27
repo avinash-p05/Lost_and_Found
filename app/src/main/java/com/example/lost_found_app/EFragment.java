@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -35,6 +36,8 @@ public class EFragment extends Fragment {
         b = view.findViewById(R.id.logout);
         progress = view.findViewById(R.id.progressBar5);
         progress.setVisibility(View.INVISIBLE);
+        final TextView hub= view.findViewById(R.id.github);
+        final TextView link= view.findViewById(R.id.linkedin);
         Bundle data = getArguments();
         if (data != null) {
             String user = data.getString("uid1");
@@ -79,7 +82,23 @@ public class EFragment extends Fragment {
                 }
             }
         });
+        hub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://github.com/avinash-p05");
+            }
+        });
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.linkedin.com/in/avinash-pauskar-00b597244/");
+            }
+        });
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

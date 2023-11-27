@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
         android:inputType="textEmailAddress"
         android:text="Already have a account? "
         android:textColor="@color/signup"
-        android:textSize="16sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +41,9 @@
 
     <EditText
         android:id="@+id/p2"
-        android:layout_width="340dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:textSize="@dimen/_14ssp"
         android:background="@drawable/input"
         android:elevation="12dp"
         android:ems="10"
@@ -52,7 +53,6 @@
         android:inputType="text|textPassword|textNoSuggestions"
         android:paddingLeft="20dp"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,15 +63,14 @@
 
     <android.widget.Button
         android:id="@+id/r"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:textSize="@dimen/_18ssp"
         android:background="@drawable/btn"
-
         android:elevation="12dp"
         android:fontFamily="@font/alata"
         android:text="Register"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
         android:textStyle="bold|italic"
         app:iconPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,8 +83,8 @@
     <EditText
         android:id="@+id/uid"
         android:textColorHint="@color/white"
-        android:layout_width="340dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
         android:background="@drawable/input"
         android:capitalize="words"
         android:elevation="12dp"
@@ -96,7 +95,7 @@
         android:paddingLeft="20dp"
 
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,8 +106,9 @@
 
     <EditText
         android:id="@+id/email1"
-        android:layout_width="340dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:textSize="@dimen/_14ssp"
         android:autoText="false"
         android:background="@drawable/input"
         android:elevation="12dp"
@@ -119,7 +119,6 @@
         android:inputType="text|textNoSuggestions"
         android:paddingLeft="20dp"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -130,8 +129,9 @@
 
     <EditText
         android:id="@+id/p1"
-        android:layout_width="340dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:textSize="@dimen/_14ssp"
         android:background="@drawable/input"
         android:elevation="12dp"
         android:ems="10"
@@ -141,7 +141,6 @@
         android:inputType="text|textPassword|textNoSuggestions"
         android:paddingLeft="20dp"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +157,7 @@
         android:fontFamily="@font/alata"
         android:text="Register"
         android:textColor="@color/signup"
-        android:textSize="34sp"
+        android:textSize="@dimen/_34ssp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -181,8 +180,9 @@
 
     <EditText
         android:id="@+id/fname"
-        android:layout_width="340dp"
-        android:layout_height="45dp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:textSize="@dimen/_14ssp"
         android:background="@drawable/input"
         android:elevation="12dp"
         android:textColorHint="@color/white"
@@ -192,8 +192,6 @@
         android:inputType="text|textPersonName|textNoSuggestions"
         android:paddingLeft="20dp"
         android:textColor="@color/white"
-
-        android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

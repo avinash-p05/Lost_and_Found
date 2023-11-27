@@ -15,16 +15,14 @@
 
     <android.widget.Button
         android:id="@+id/submit"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
         android:background="@drawable/btn"
-
         android:fontFamily="@font/alata"
         android:text="submit"
         android:textColor="#FFFFFF"
-        android:textSize="22sp"
+        android:textSize="@dimen/_18ssp"
         android:textStyle="bold|italic"
-
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +33,8 @@
 
     <android.widget.Button
         android:id="@+id/chooseimg"
-        android:layout_width="120dp"
-        android:layout_height="25dp"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_20sdp"
         android:background="@drawable/btn"
         android:fontFamily="@font/alata"
         android:text="Choose Image"
@@ -52,8 +50,9 @@
 
     <EditText
         android:id="@+id/description"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:textSize="@dimen/_10ssp"
         android:background="@drawable/report_input"
         android:ems="10"
         android:fontFamily="@font/alata"
@@ -62,10 +61,8 @@
         android:inputType="textMultiLine"
         android:lines="1"
         android:padding="10dp"
-
-        android:textColor="@color/black"
+        android:textColor="@color/signup"
         android:textColorHint="@color/black"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -75,8 +72,9 @@
 
     <EditText
         android:id="@+id/contact"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:textSize="@dimen/_10ssp"
         android:background="@drawable/report_input"
         android:ems="10"
         android:fontFamily="@font/alata"
@@ -85,10 +83,8 @@
         android:inputType="text|textShortMessage"
         android:lines="1"
         android:padding="10dp"
-
-        android:textColor="@color/black"
+        android:textColor="@color/signup"
         android:textColorHint="@color/black"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -98,8 +94,8 @@
 
     <EditText
         android:id="@+id/objectname"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_30sdp"
         android:background="@drawable/report_input"
         android:ems="10"
         android:fontFamily="@font/alata"
@@ -109,9 +105,9 @@
         android:lines="1"
         android:padding="10dp"
 
-        android:textColor="@color/black"
+        android:textColor="@color/signup"
         android:textColorHint="@color/black"
-        android:textSize="14sp"
+        android:textSize="@dimen/_10ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -136,8 +132,9 @@
 
     <EditText
         android:id="@+id/location"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:textSize="@dimen/_10ssp"
         android:background="@drawable/report_input"
         android:ems="10"
         android:fontFamily="@font/alata"
@@ -146,10 +143,8 @@
         android:inputType="textShortMessage|text"
         android:lines="1"
         android:padding="10dp"
-
-        android:textColor="@color/black"
+        android:textColor="@color/signup"
         android:textColorHint="@color/black"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -166,7 +161,7 @@
         android:text="Report Center"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="35sp"
+        android:textSize="@dimen/_30ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -183,11 +178,11 @@
         android:text="Found"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="20sp"
+        android:textSize="@dimen/_18ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.2" />
@@ -200,7 +195,7 @@
         android:text="Lost"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="20sp"
+        android:textSize="@dimen/_18ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -218,7 +213,7 @@
         android:text="Select Report Type *"
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="15sp"
+        android:textSize="@dimen/_14ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -236,7 +231,7 @@
         android:text="Upload Image - "
         android:textAlignment="center"
         android:textColor="@color/signup"
-        android:textSize="15sp"
+        android:textSize="@dimen/_11ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -275,15 +270,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="180dp"
-        android:layout_height="130dp"
-
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_100sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        app:layout_constraintVertical_bias="0.773" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
