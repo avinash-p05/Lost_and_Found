@@ -126,7 +126,7 @@ public class CFragment extends Fragment {
                                     progressBar.setVisibility(View.INVISIBLE);
                                     Toast.makeText(requireContext(), "Report has been submitted successfully", Toast.LENGTH_SHORT).show();
                                 }
-                            }, 4000); // 4 seconds
+                            }, 2000); // 4 seconds
                         } else {
                             Toast.makeText(requireContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show();
                             isSubmitting = false;

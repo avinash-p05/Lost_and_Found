@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,7 +28,7 @@ public class Item_details extends AppCompatActivity {
     private Button claim;
     private Report report;
     private ProgressBar progess;
-
+    private final Handler handler = new Handler(Looper.getMainLooper());
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,10 +123,16 @@ public class Item_details extends AppCompatActivity {
             // Check if the current user is the same as the one who reported the item
             if (!report.getUsername().equals(getCurrentUser())) {
                 // Claim the item
-                claimItem();
+                claimItem(() -> {
+                    // Callback to update UI after claiming
+                    // Hide the claim button immediately after claiming
+                    runOnUiThread(() -> {
+                        claim.setVisibility(View.GONE);
 
-                // Display the user who claimed the item
-                showClaimedByUser();
+                        // Display the user who claimed the item
+                        showClaimedByUser();
+                    });
+                });
             } else {
                 // Alert the user that they cannot claim their own item
                 Toast.makeText(Item_details.this, "You cannot claim your own item", Toast.LENGTH_SHORT).show();
@@ -134,6 +142,8 @@ public class Item_details extends AppCompatActivity {
         // Load details from the original report
         loadReportDetails();
     }
+
+
     private String getCurrentUser() {
         SharedPreferences pref = getSharedPreferences("login", MODE_PRIVATE);
         String name = pref.getString("username", "null");
@@ -141,6 +151,7 @@ public class Item_details extends AppCompatActivity {
     }
     private void loadReportDetails() {
         progess.setVisibility(View.GONE);
+
         // Set data to views
         status.setText("Status: " + report.getReportType());
         date.setText("Date: " + report.getReportDate());
@@ -152,10 +163,26 @@ public class Item_details extends AppCompatActivity {
 
         // Load image using Glide
         Glide.with(this)
-                .load(report.getImageUrl())  // Replace with the actual method to get the image URL
+                .load(report.getImageUrl())
                 .into(img);
+
+        // Check if the report is "Lost" or "Found"
+        if (report.getReportType().equalsIgnoreCase("Lost")) {
+            // If the status is "lost", hide the claim button and claimed by TextView
+            claim.setVisibility(View.GONE);
+            TextView claimedByTextView = findViewById(R.id.claimedByTextView);
+            claimedByTextView.setVisibility(View.GONE);
+        } else if (report.getReportType().equalsIgnoreCase("Found")) {
+            // If the status is "found", you might want to show the claim button or perform other actions
+            // For now, let's just show the claim button
+            claim.setVisibility(View.VISIBLE);
+        } else {
+            // Handle other report types as needed
+            // You can add additional conditions or actions for different report types
+        }
     }
-    private void claimItem() {
+
+    private void claimItem(ClaimCallback claimCallback) {
         // Update the local report object
         report.setClaimed(true);
 
@@ -171,6 +198,7 @@ public class Item_details extends AppCompatActivity {
                 .addOnSuccessListener(aVoid -> {
                     // Claimed report saved successfully
                     Toast.makeText(Item_details.this, "Item claimed successfully", Toast.LENGTH_SHORT).show();
+                    claimCallback.onClaimComplete(); // Callback to update UI
                 })
                 .addOnFailureListener(e -> {
                     // Handle failure
@@ -183,4 +211,10 @@ public class Item_details extends AppCompatActivity {
         reportsRef.child("claimedByUserId").setValue(getCurrentUser());
     }
 
+    // Callback interface to update UI after claiming
+    private interface ClaimCallback {
+        void onClaimComplete();
+    }
 }
+
+
