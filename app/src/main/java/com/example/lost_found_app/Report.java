@@ -1,11 +1,9 @@
 package com.example.lost_found_app;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Report implements Serializable {
-    private String username,user;
+    private String username;
     private String reportType;
     private String objectName;
     private String location;
@@ -64,16 +62,12 @@ public class Report implements Serializable {
     public String getImageUrl() {
         return imageUrl;
     }
-    public String getUser(){
-        return user;
-    }
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 
 
-    // Other getter methods...
 
     // Getter methods for all fields
 

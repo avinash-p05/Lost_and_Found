@@ -108,7 +108,7 @@
         android:fontFamily="@font/alata"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:text="Instructions:\n1. Welcome to our application!
+        android:text="Instructions:\n1. Welcome to the application!
 \n2. Explore the Home section to review the overall report count.
 \n3. Move to the adjacent Report Center to submit meticulous reports for lost or found items.
    \n- Ensure reports are detailed and refrain from inappropriate content.
